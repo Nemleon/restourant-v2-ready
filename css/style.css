@@ -1,0 +1,711 @@
+/* Общие стили для сайта */
+* {
+	
+	box-sizing: border-box;
+	font-family: candara;
+	
+}
+
+body {
+		position: relative;
+		margin: 0;
+		
+	}
+
+table {
+
+	margin: auto;
+	min-width: 50%;
+	padding: 2%;
+	text-align: center;
+	
+}
+
+.wrapper {
+
+	margin: auto;
+	display: flex;
+	align-self: center;
+	width: 90%;
+	text-align: center;
+	
+}
+
+.main {
+	
+	margin: auto;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	
+}
+	
+	/* Стили текста */
+	
+	
+	p {font-size: 16px;}
+	
+	h2 {color: white;}
+	
+	textarea {
+		
+		border-radius: 10px;
+		height: 250px;
+		margin: 2px;
+		font-size: 16px;
+		padding: 5px;
+		width: 55%;
+		resize: none;
+		
+	}
+	
+	.textInput {
+		
+		height: 6%;
+		margin: 2px;
+		font-size: 16px;
+		padding: 5px;
+		width: 55%;
+		
+	}
+	
+	.articles {
+		
+		flex-direction: column;
+		align-items: center;
+		display:flex;
+		background:#1e1f26;
+		width: 90%;
+		margin: auto;
+		box-shadow: 0 0 10px black;	
+		
+	}
+	
+	.spaceContent {
+		
+		margin: auto;
+		padding: 1%;
+		width: 90%;
+		background: #f6f6f6;
+		box-shadow: 0 0 10px black;
+		
+	}
+	
+	.spaceText {
+		
+		margin: auto;
+		width: 90%;
+		
+	}
+	
+	.orderAlarm {
+		
+		font-size: 20px; 
+		color: red;
+		
+	}
+	
+	.feedbackTy {
+		
+		font-size: 20px; 
+		color: green;
+		
+	}
+	
+	.feedbackErr, .orderErr {
+		
+		font-size: 20px; 
+		color: red;
+		
+	}
+	
+	/* ----------------- */
+	
+	/* Пустой блок для занимания свободного пространства */
+
+	.space {
+		
+		flex-basis: 400px;
+		flex-grow: 10;
+		flex-shrink: 10;
+		
+	}
+
+	/* ---------------------------------------- */
+.backgroundCart {
+	
+	display:none;
+	background: rgba(0, 0, 0, 0.5);
+	width:100%; 
+	height:100%;
+	position: fixed; 
+	z-index: 101; 
+	top: 0;
+	left: 0;
+
+}
+
+.spaceCart {
+	
+	justify-content: space-around;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+.miniCartView {
+	
+	overflow: auto;
+	align-items: center;
+	flex-direction: column;
+	z-index: 102; 
+	position: fixed;
+	height: 80%;
+	top: 15%;
+	left: 10%;
+	width: 80%;
+	
+}
+
+#cart{
+	
+	display: flex;
+	width: 95%;
+	
+}
+
+.showCart {
+	
+	width: 66px;
+	height: 66px;
+	border-color: black;
+	position: fixed;
+	z-index: 99; 
+	bottom: 8.5%;
+	right: 3%;
+	background: #ff550d;
+	border-radius: 100px;
+	box-shadow: 0 0 0 3px black, 0 0 20px #333;
+	
+}
+
+.goOrder {
+
+	font-size: 20px;
+	height: 40px; 
+	width: 30%;
+	background: #ff550d;
+	
+}
+
+.exitCart {
+	
+	cursor: pointer;
+	z-index: 110; 
+	position: fixed;
+	top: 17%;
+	right: 16%;
+	
+}
+
+.counter {
+	
+	border-radius:100px;
+	box-shadow: 0 0 0 3px green, 0 0 50px green;
+	background: white;
+	bottom: 14%;
+	right: 2.3%;
+	position: fixed;
+	width: 27px;
+	height: 27px;
+	z-index: 100;
+	font-size: 20px;
+		
+}
+
+.goOrder:hover { background: rgb(138, 28, 28);}
+
+.formErrors {
+	
+	width: 90%;
+	margin: 1% 15% 1%;
+	text-align: left;
+	color: red;
+	text-shadow: 1px 1px 10px rgba(255, 0, 0, 5);
+	font-weight: bold;
+	
+}
+
+.button {	
+
+	outline: none;
+	border: 0;
+	background: transparent;
+	width: 25px; 
+	height: 25px;	
+	
+}
+.cartBut {	
+	
+	width: 25px; 
+	height: 25px;
+	cursor: pointer;	
+	
+}
+.cartButtImg {
+	
+	width: 25px; 
+	height: 25px;
+	
+}
+
+.button:active {	
+
+	width: 24px; 
+	height: 24px;	
+	
+}
+
+.cartButtImg:hover {
+	
+	width: 27px; 
+	height: 27px;
+	
+}
+
+
+.selected {box-shadow: 0 0 30px black;}
+
+.invalid {box-shadow: 0 0 5px red;}
+.valid {box-shadow: 0 0 5px green;}
+
+
+	/* Стили кнопок */
+	.buttonSend, .buttonDelete {
+		
+		text-align: center;
+		cursor: pointer;
+		margin: 2px 0 2px;
+		font-weight: 700;
+		color: white;
+		width: 300px;
+		padding: .8em 1em calc(.8em + 3px);
+		transition: 0.2s;	
+		
+	} 
+	
+	.buttonSend {
+		
+		background: rgb(64,199,129);
+		box-shadow: 0 -5px rgb(26, 99, 60) inset;
+		
+	}
+	.buttonSend:hover { background: rgb(53, 167, 110);}
+	
+	.buttonSend:active {
+		
+		background: rgb(33,147,90);
+		box-shadow: 0 3px rgb(33,147,90) inset;
+		
+	}
+	
+	.buttonSend:disabled {
+		
+		cursor: default;
+		background: rgb(53,167,110);
+		box-shadow: 0 3px rgb(53,167,110) inset;
+		
+	}
+	
+	.buttonDelete {
+		
+		background: #ff550d;
+		box-shadow: 0 -3px rgb(138, 28, 28) inset;
+		
+	} 
+	
+	.buttonDelete:hover { background: rgb(138, 28, 28);}
+	
+	.buttonDelete:active {
+		
+		background: rgb(77, 16, 16);
+		box-shadow: 0 3px rgb(77, 16, 16) inset;
+	
+	}
+	
+	.positioningBut {
+		
+		width: 55%;
+		margin: auto;
+		display: flex;
+		
+	}
+
+	/* ------------------------ */
+	
+/* --------------------- */
+
+/* Стили для шапки */
+
+.header {
+	
+	display: flex;
+	box-shadow: 0 4px 7px -5px black;
+	background: #1e1f26;
+	
+}
+
+.headerSpace {
+	
+	display: flex;
+	width: 95%;
+	justify-content: space-between;
+	margin: auto;
+	
+}
+
+.logo {display:flex;}
+
+.hat {
+	
+	display:flex;
+	align-items: center;
+	
+}
+
+.navigation {display: none;}
+
+	/* Ссылки кнопки */
+	
+	.link, .linkOrange{
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		color: white;
+		text-decoration: none;
+		cursor: pointer;
+		font-weight: bold;
+		font-size: 18px;
+	
+		
+	}
+
+	.linkDiv, .linkOrangeDiv {
+		justify-content: center;
+		align-items: center;
+		height: 55px;
+		display: flex;
+		width: 200px;	
+		
+		transition: 0.2s;
+
+	}
+	.linkDiv {
+		
+		background: #1e1f26;
+		box-shadow: 0 -3px #14100e inset;
+		
+	}
+	.linkDiv:hover { background: #14100e;}
+	
+	.linkOrangeDiv {
+		
+		background: #ff550d;
+		box-shadow: 0 -3px rgb(138, 28, 28) inset;
+		
+	}
+	.linkOrangeDiv:hover { background: rgb(138, 28, 28);}
+	
+	.linkLogo {
+		
+		margin-top: 4%;
+		text-decoration: none;
+		display: flex;
+		width: 230px;
+		padding: .8em 1em calc(.8em + 3px);
+		cursor: pointer;
+		transition: 0.2s;
+		
+	}
+	
+	/* ------------------- */
+
+/* ----------------------- */
+
+/* Стили для меню */
+
+.spaceMenu	 {
+	
+	margin: auto;
+	display: flex;
+	width: 90%;
+	background: #f6f6f6;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	box-shadow: 0 0 10px black;
+	
+}
+.menu {
+	
+	display: flex;
+	height: 450px;
+	min-width: 300px;
+	width: 300px;
+	background: white;
+	font-size: 17px;
+	
+}
+
+.menuLabel {
+	
+	z-index: 10;
+	display: flex;
+	position: relative;
+	margin: 2%;
+	cursor: pointer;
+	
+}
+#onHover:hover {box-shadow: 0 0 15px red;}
+
+.menuLabel:hover {box-shadow: 0 0 20px #1e9912;}
+
+.nameFood, .cost, .mass {
+	
+	display: flex;
+	position: absolute;
+	left: 5%
+	
+}
+.nameFood {top: 69%;}
+
+.cost {top: 78%;}
+
+.mass {top: 85%}
+
+.image {
+	display: flex;
+	position: absolute;
+	background: none;
+	min-width: 100%;
+	
+}
+.add_del_cart {
+	
+	flex-direction: column;
+	display: flex;
+	position: absolute;
+	top: 92%;
+	min-width: 100%;
+	align-items: center;
+	
+}
+
+.buttonMenuAdd {
+	
+	cursor: pointer;
+	border: none;
+	box-shadow: 0 0 0 3px green, 0 0 10px green;
+	background: white;
+	min-width: 90%;
+	
+}
+
+.buttonMenuDel {
+	
+	cursor: pointer;
+	border: none;
+	box-shadow: 0 0 0 3px red, 0 0 10px red;
+	background: white;
+	min-width: 90%;
+	
+}
+
+.deliverySpace {
+	
+	padding: 0 10% 0;
+	display: flex;
+	margin: auto;
+	width: 55%;
+	justify-content: space-evenly;
+	color: #399e56;
+	
+}
+
+/* ------------------- */
+
+/* Стили для футера */
+
+.footer {
+	
+	text-align: center;
+	margin-top: 2%;
+	display: block;
+	padding: 2px;
+	box-shadow: 0 -4px 7px -5px black;
+}
+
+.footSpace {
+	
+	display: flex;
+	margin: auto;
+	align-items: center;
+	flex-direction: column;
+	width: 90%;
+	
+}
+
+.footImg, .footEnd {margin: 2%;}
+
+.footList {width: 70%;}
+
+.foot {
+	
+	text-decoration: none;
+	margin: 0 2% 0;
+	
+}
+.map {
+	
+	display: flex;
+	margin: auto;
+	width: 60%;
+	height: 500px;
+}
+
+/* ----------------- */
+
+@media (max-width: 1100px) {
+	
+	
+	.header {
+		
+		width: 100%;
+		height: 80px;
+		top: 0;
+		position: fixed;
+		z-index: 90;
+		
+	}
+	
+	.wrapper {margin-top: 18%;}
+	
+	.spaceContent {min-width: 98%;}
+	
+	.spaceMenu	 {width: 98%;}
+	
+	.miniCartView {
+		
+		height: 90%;
+		top: 5%;
+
+	}
+	
+	.exitCart {
+		right: 2%;
+		top: 2%;	
+	}
+	
+	.showCart {
+
+		bottom: 5%;
+		right: 5%;
+	
+	}
+	
+	.counter {
+	
+		bottom: 11.5%;
+		right: 3%;
+	
+	}
+	
+	.cartButtImg {
+		
+		width: 20px; 
+		height: 20px;
+		
+	}
+	
+	.selected {box-shadow: 0 0 30px rgb(138, 28, 28);}
+	
+	#onHover:hover {box-shadow: none;}
+	
+	.menuLabel:hover {box-shadow: none;}
+	
+	.articles {width: 98%;}
+	
+	.formErrors {margin: auto;}
+	
+	.textInput {width: 70%;}
+	
+	textarea {width: 70%;}
+	
+	.headerSpace {
+		
+		flex-wrap: wrap;
+		justify-content: center;
+		display: flex;
+		width: 99%;
+		margin: auto;
+		
+	}
+	
+	.navigation {
+
+		position: fixed;
+		top: 3.2%;
+		left: 6%;
+		cursor: pointer;
+		display: block;
+		width: 40px;
+		height: 40px;
+		
+	}
+	
+	.logo {display: flex;}
+	
+	.hat {
+		
+		background: grey;		
+		position: fixed;
+		top: 80px;
+		left: 0;
+		margin: 1px;
+		flex-direction: column;
+		display:none;
+		justify-content: flex-start;
+		flex-wrap: nowrap;
+		width: 60%;
+
+	}
+	
+	.linkDiv, .linkOrangeDiv {
+		
+		align-items: normal;
+		flex-direction: row;
+		text-decoration: none;
+		display: block;
+		width: 100%;
+		cursor: pointer;
+		color: white;
+		padding: .8em 1em calc(.8em + 3px);
+		transition: 0.2s;
+		text-align: center;
+		
+	}
+	
+	.map {
+		
+		display: flex;
+		margin: auto;
+		width: 95%;
+		height: 300px;
+		
+	}
+}
+
